@@ -55,6 +55,7 @@ class ArrayStats
 		freq_hash = {}
 		@array.each do |num|
 			num_string_length = num.to_s.length
+			num_string_length = num_string_length.to_s
 			if freq_hash.has_key?(num_string_length)
 				freq_hash[num_string_length] += 1
 			else

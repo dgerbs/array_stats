@@ -35,7 +35,7 @@ describe ArrayStats do
 	end
 
 	it 'should return a hash that breaks down how many times n-digit numbers are provided in the array' do
-			expect({ 1 => 2, 3 => 2, 4 => 4 }).to eql({ 1 => 1, 3 => 2, 4 => 4 })
+			expect(ArrayStats.new([1, 1000, 200, 300, 3000, 4000, 5500]).freq).to eql({ '1' => 1, '3' => 2, '4' => 4 })
 	end
 
 	it 'should return a hash that breaks down how many times n-digit numbers are in the provided array' do
