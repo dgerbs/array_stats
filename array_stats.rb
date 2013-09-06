@@ -3,6 +3,7 @@ require 'ruby-standard-deviation'
 class ArrayStats
 	def initialize(array)
 		@array = array
+		@sum = 0
 		sort
 	end
 
@@ -15,11 +16,8 @@ class ArrayStats
 	end
 
 	def average
-		sum = 0
-		@array.each do |num|
-			sum += num
-		end
-		sum / @array.size
+		sum
+		@sum / @array.size
 	end
 
 	def standard_dev
@@ -28,6 +26,13 @@ class ArrayStats
 
 	def nth_number(num)
 		@array[num]
+	end
+
+	def sum
+		@array.each do |num|
+			@sum += num
+		end
+		@sum
 	end
 
 	private

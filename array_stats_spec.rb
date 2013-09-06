@@ -21,4 +21,8 @@ describe ArrayStats do
 	it 'should return the nth smallest number in the provided array' do
 			expect(ArrayStats.new([1, 1000, 200, 300, 3000, 4000, 5500]).nth_number(3)).to eql(1000)
 	end
+
+	it 'should return the sum number in the provided array' do
+			expect(ArrayStats.new([1, 1000, 200, 300, 3000, 4000, 5500]).sum).to eql(14001)
+	end
 end
