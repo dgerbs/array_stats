@@ -34,5 +34,8 @@ describe ArrayStats do
 			expect(ArrayStats.new([1, 1000, 200, 300, 3000, 4000, 5500]).difference).to eql(5499)
 	end
 
+	it 'should return a hash that breaks down how many times n-digit numbers are in the provided array' do
+			expect(ArrayStats.new([1, 1000, 200, 300, 3000, 4000, 5500, 5500]).digit_freq).to eql({1 => 1, 200 => 1, 300 => 1, 1000 => 1, 3000 => 1, 4000 => 1, 5500 => 2})
+	end
 end
 

@@ -51,6 +51,18 @@ class ArrayStats
 		largest - smallest
 	end
 
+	def digit_freq
+		digit = {}
+		@array.each do |num|
+			if digit.has_key?(num)
+				digit[num] += 1
+			else
+				digit[num] = 1
+			end
+		end
+		digit
+	end
+	
 	private
 
 	def sort
