@@ -29,4 +29,10 @@ describe ArrayStats do
 	it 'should return the product in the provided array' do
 			expect(ArrayStats.new([1, 1000, 200, 300, 3000, 4000, 5500]).product).to eql(3960000000000000000)
 	end
+
+	it 'should return the difference between the highest and lowest values in the provided array' do
+			expect(ArrayStats.new([1, 1000, 200, 300, 3000, 4000, 5500]).difference).to eql(5499)
+	end
+
 end
+

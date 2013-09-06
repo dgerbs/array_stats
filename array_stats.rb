@@ -47,6 +47,10 @@ class ArrayStats
 		product
 	end
 
+	def difference
+		largest - smallest
+	end
+
 	private
 
 	def sort
