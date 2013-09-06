@@ -51,6 +51,19 @@ class ArrayStats
 		largest - smallest
 	end
 
+	def freq
+		freq_hash = {}
+		@array.each do |num|
+			num_string_length = num.to_s.length
+			if freq_hash.has_key?(num_string_length)
+				freq_hash[num_string_length] += 1
+			else
+				freq_hash[num_string_length] = 1
+			end
+		end
+		freq_hash
+	end
+
 	def digit_freq
 		digit = {}
 		@array.each do |num|
@@ -69,3 +82,7 @@ class ArrayStats
 		@array.sort!
 	end
 end
+
+# a = ArrayStats.new([1, 1000, 200, 300, 3000, 4000, 5500, 5500])
+
+# a.freq

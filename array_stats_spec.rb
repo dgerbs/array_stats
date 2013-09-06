@@ -6,7 +6,7 @@ describe ArrayStats do
 			expect(ArrayStats.new([1, 1000, 200, 300, 3000, 4000, 5500]).largest).to eql(5500)
 	end
 
-	it 'should return the smallest number in the provided array' do
+	it 'returns the smallest number in the provided array' do
 			expect(ArrayStats.new([1, 1000, 200, 300, 3000, 4000, 5500]).smallest).to eql(1)
 	end
 
@@ -32,6 +32,10 @@ describe ArrayStats do
 
 	it 'should return the difference between the highest and lowest values in the provided array' do
 			expect(ArrayStats.new([1, 1000, 200, 300, 3000, 4000, 5500]).difference).to eql(5499)
+	end
+
+	it 'should return a hash that breaks down how many times n-digit numbers are provided in the array' do
+			expect({ 1 => 2, 3 => 2, 4 => 4 }).to eql({ 1 => 1, 3 => 2, 4 => 4 })
 	end
 
 	it 'should return a hash that breaks down how many times n-digit numbers are in the provided array' do
