@@ -25,4 +25,8 @@ describe ArrayStats do
 	it 'should return the sum number in the provided array' do
 			expect(ArrayStats.new([1, 1000, 200, 300, 3000, 4000, 5500]).sum).to eql(14001)
 	end
+
+	it 'should return the product in the provided array' do
+			expect(ArrayStats.new([1, 1000, 200, 300, 3000, 4000, 5500]).product).to eql(3960000000000000000)
+	end
 end

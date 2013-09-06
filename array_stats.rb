@@ -35,6 +35,18 @@ class ArrayStats
 		@sum
 	end
 
+	def product
+		product = 0
+		@array.each do |num|
+			if product == 0
+				product += num
+			else
+				product *= num
+			end
+		end
+		product
+	end
+
 	private
 
 	def sort
